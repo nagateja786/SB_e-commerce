@@ -46,6 +46,7 @@ public class CategoryServiceImple implements CategoryService {
             Category existingCategory = categoryOptional.get();
             category.setCategoryName(category.getCategoryName());
             return category;
+
         }else {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Category not found with id: " + categoryId);
         }
